@@ -1,0 +1,221 @@
+/*background colour*/
+body {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(6, 14, 67) 100%);
+    margin: 0;
+    min-height: 300px;
+}
+
+/*Text styling*/
+body {
+    font-family: "alef";
+    font-style: normal;
+    color: white;
+    text-align: center;
+}
+/*headers*/
+h1 {
+    color: #f6ffa6;
+}
+h2{
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    color: #f6ffa6;
+}
+.header {
+    font-family: "alef";
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    color: #f6ffa6;
+}
+
+/*making hero banner span across the screen*/
+.hero-container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.Hero-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+/*hero banner text colour and size*/
+.Hero-banner h1 { 
+    font-size: 3rem; 
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/*making sure everything stays in containers*/
+.container {
+    margin: 3rem auto;
+    max-width: 75rem;
+    padding: 3rem 1.5rem;
+    position: relative;
+  }
+
+
+/* content section */
+.content-one {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.9rem;
+      max-width: 1100px;
+      margin: 2rem auto -6rem;
+  }
+
+  /*accordion*/
+  .accordion {
+    background-color: #000000;
+    color: #f6ffa6;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+  }
+
+  .accordion:hover {
+    background-color: rgb(6, 14, 67);
+  }
+  
+    button {
+    text-align: center;
+  }
+
+  .panel {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+  }
+
+/* cards */
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    list-style: none;
+ }
+
+ .cardimages{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    img{
+        border-bottom: 0.25rem solid #f6ffa6;
+        border-radius: 0.25rem 0.25rem 0 0;
+        height: auto;
+        width: 100%; 
+    }
+ }
+
+ .card{
+    background-color: #000000;
+    border-radius: 0.25rem;
+    box-shadow: 0rem 0.125rem .5rem #f6ffa6;
+    width: 24rem;
+    margin-bottom: 10px;
+    align-items: flex-start;
+    text-align: center;
+}
+
+/* footer */
+#page-container {
+  padding-bottom: 2.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #f6ffa6;
+}
+
+.footer{
+  position: static;
+  bottom: 0;
+  height: 4rem;
+  width: 100%;
+  background-color: rgb(0, 0, 37);
+}
+
+.footer-section{ 
+    padding: 0;
+    margin: 0;
+    list-style-type: circle;
+    background-color: rgb(0, 0, 37);
+}
+
+/*responsive*/
+@media screen and (max-width: 768px) {
+    .card-container{
+        flex-direction: column;
+    }
+    .card{
+      width: 100%;
+    }
+    /* making text smaller for smaller screens*/
+    .Hero-banner h1 {
+      font-size: 2rem; 
+    }
+    .content-p {
+      font-size: smaller;
+    }
+    .content-text {
+      font-size: small;
+    }
+}
+  
+  @media screen and (min-width: 768px) {
+      .card-container{
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .card{
+        width: 49%;
+      }
+      .card:nth-of-type(9){
+        width: 200%;
+      }
+    }
+  
+  @media screen and (min-width: 1200px) {
+      .card-container{
+          justify-content: space-between;
+      }
+      .card{
+        width: 32.3%;
+      }
+      .card:nth-of-type(9){
+        width: 32.3%;
+      }
+    }
+
+/* responsive video*/
+.video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
+
+@media screen and (min-width: 768px) {
+    .card:nth-of-type(10){
+        width: 200%;
+      }
+} 
